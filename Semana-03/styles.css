@@ -1,3 +1,21 @@
 *{
     font-family: 'Courier New', Courier, monospace;
 }
+
+.header{
+    display: block;
+    background-color: #ddd;
+    height: 100px;
+}
+
+.header h1{
+    display: inline;
+}
+
+.header-ul{
+    display: inline;
+}
+
+.header-ul-li{
+    display: inline;
+}
