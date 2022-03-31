@@ -1,0 +1,13 @@
+.section{
+    background-color: #036;
+    display: flex;
+}
+.section-ul{
+    color: #fff;
+    display: flex;
+}
+
+.section a{
+    color: #fff;
+    text-decoration: none;
+}
