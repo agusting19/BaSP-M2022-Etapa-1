@@ -2,6 +2,10 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+h2{
+    font-size: 20px;
+}
+
 .header{
     display: block;
     position: relative;
@@ -16,13 +20,6 @@
     position: relative;
 }
 
-.icon{
-    font-size: 30px;
-    top: 35px;
-    left: 30px;
-    color: #ff5500;
-}
-
 .header h1{
     font-size: 36px;
     top: 32px;
@@ -30,9 +27,16 @@
     color: #000;
 }
 
+.icon{
+    font-size: 30px;
+    top: 35px;
+    left: 30px;
+    color: #ff5500;
+}
+
 .header-ul{
     top: 60px;
-    left: 500px;
+    left: 750px;
 }
 
 .header-ul-li i{
@@ -42,7 +46,7 @@
 
 .sidebar{
     position: absolute;
-    height: 5000px;
+    height: 3200px;
     width: 300px;
     left: 0px;
     top: 0px;
@@ -64,10 +68,6 @@
     left: 20px;
 }
 
-.menu h2{
-    font-size: 20px;
-}
-
 .menu ul{
     position: relative;
     top: 40px
@@ -75,4 +75,17 @@
 
 .menu li{
     margin-bottom: 20px;
+}
+
+#content{
+    position: relative;
+    left: 300px;
+}
+
+.section{
+    display: block;
+    position: relative;
+    width: 1254px;
+    left: 50px;
+    margin: 50px 0px;
 }
