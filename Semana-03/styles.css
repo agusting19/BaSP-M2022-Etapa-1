@@ -4,18 +4,46 @@
 
 .header{
     display: block;
-    background-color: #ddd;
+    position: relative;
+    background-color: #fff;
     height: 100px;
+    left: 300px;
+    border-bottom: 5px solid #ff5500;
+}
+
+.header h1, .header-ul, .header-ul-li, .icon{
+    display: inline;
+    position: relative;
+}
+
+.icon{
+    font-size: 30px;
+    top: 35px;
+    left: 30px;
+    color: #ff5500;
 }
 
 .header h1{
-    display: inline;
+    font-size: 30px;
+    top: 30px;
+    left: 70px;
+    color: #000;
 }
 
 .header-ul{
-    display: inline;
+    top: 60px;
+    left: 600px;
 }
 
-.header-ul-li{
-    display: inline;
+.header-ul-li i{
+    color: #000;
+}
+
+.sidebar{
+    position: absolute;
+    height: 5000px;
+    width: 300px;
+    left: 0px;
+    top: 0px;
+    background-color: #ccc;
 }
