@@ -56,7 +56,7 @@ h2{
 
 .sidebar{
     position: absolute;
-    height: 3200px;
+    height: 2685px;
     width: 300px;
     left: 0px;
     top: 0px;
@@ -250,14 +250,14 @@ h2{
 #history img{
     position: relative;
     top: 30px;
-    width: 500px;
+    width: 550px;
 }
 
 #history p{
     display: block;
     position: relative;
-    width: 600px;
-    left: 540px;
+    width: 650px;
+    left: 600px;
     bottom: 140px;
 }
 
@@ -268,7 +268,7 @@ h2{
 
 #lists div{
     display: inline-block;
-    margin: 0px 100px;
+    margin: 0px 110px;
     position: relative;
     top: 30px;
 }
@@ -281,4 +281,35 @@ h2{
 
 #lists div li{
     margin: 10px;
+}
+
+.footer{
+    display: block;
+    position: relative;
+    background-color: #fff;
+    height: 100px;
+    left: 300px;
+    border-top: 5px solid #ff5500;
+}
+
+.footer-ul, .footer-ul-li{
+    display: inline;
+    position: relative;
+}
+
+.footer-ul{
+    top: 30px;
+    left: 544px;
+}
+
+.footer-ul-li i{
+    color: #000;
+    margin-left: 20px;
+}
+
+.footer p{
+    font-weight: bold;
+    position: relative;
+    top: 50px;
+    left: 444px;
 }
