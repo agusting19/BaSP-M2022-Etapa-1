@@ -21,8 +21,9 @@ h2{
     position: relative;
     background-color: #fff;
     height: 100px;
-    left: 300px;
     border-bottom: 5px solid #ff5500;
+    width: 85%;
+    left: 15%;
 }
 
 .header h1, .header-ul, .header-ul-li, .icon{
@@ -33,7 +34,7 @@ h2{
 .header h1{
     font-size: 36px;
     top: 32px;
-    left: 70px;
+    left: 50px;
     color: #000;
 }
 
@@ -46,7 +47,7 @@ h2{
 
 .header-ul{
     top: 60px;
-    left: 750px;
+    left: 530px;
 }
 
 .header-ul-li i{
@@ -57,25 +58,28 @@ h2{
 .sidebar{
     position: absolute;
     height: 2685px;
-    width: 300px;
+    width: 15%;
     left: 0px;
     top: 0px;
     background-color: #ccc;
 }
 
 .btn-search{
-    width: 260px;
+    width: 90%;
     height: 35px;
     border: 1px solid #333;
+    border-radius: 5px;
     position: relative;
     top: 35px;
-    left: 20px;
+    left: 10px;
 }
 
 .menu{
     position: relative;
     top: 150px;
     left: 20px;
+    width: 80%;
+    height: 200px;
 }
 
 .menu ul{
@@ -89,36 +93,36 @@ h2{
 
 #content{
     position: relative;
-    left: 300px;
+    left: 15%;
 }
 
 .section{
     position: relative;
-    left: 50px;
+    left: 40px;
     margin: 50px 0px;
 }
 
 #info{
-    width: 1300px;
-    height: 400px;
+    width: 80%;
+    height: 350px;
 }
 
 #info h2{
     display: inline;
     position: absolute;
-    top: 60px;
+    top: 20px;
 }
 
 #info p{
     display: inline-block;
-    width: 600px;
+    width: 390px;
     position: relative;
-    bottom: 95px;
+    bottom: 80px;
 }
 #info .btn{
     position: relative;
+    right: 400px;
     bottom: 30px;
-    right: 610px;
 }
 
 #info img{
@@ -288,7 +292,8 @@ h2{
     position: relative;
     background-color: #fff;
     height: 100px;
-    left: 300px;
+    width: 85%;
+    left: 15%;
     border-top: 5px solid #ff5500;
 }
 
@@ -299,7 +304,7 @@ h2{
 
 .footer-ul{
     top: 30px;
-    left: 544px;
+    left: 420px;
 }
 
 .footer-ul-li i{
@@ -311,5 +316,6 @@ h2{
     font-weight: bold;
     position: relative;
     top: 50px;
-    left: 444px;
+    left: 100px;
+    display: inline-block;
 }
