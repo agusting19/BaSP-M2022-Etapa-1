@@ -235,3 +235,28 @@ h2{
     position: relative;
     top: 80px;
 }
+
+#history{
+    width: 1300px;
+    height: 320px;
+}
+
+#history h2{
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+
+#history img{
+    position: relative;
+    top: 30px;
+    width: 500px;
+}
+
+#history p{
+    display: block;
+    position: relative;
+    width: 600px;
+    left: 540px;
+    bottom: 140px;
+}
