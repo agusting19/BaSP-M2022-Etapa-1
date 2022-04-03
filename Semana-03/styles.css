@@ -7,12 +7,13 @@ h2{
 }
 
 .btn{
-    background-color: #ff5500;
-    width: 100px;
+    background-color: #fff;
+    color: #ff5500;
     height: 40px;
     font-size: 20px;
-    padding: 10px;
+    padding: 10px 10px;
     border-radius: 5px;
+    border: 1px solid #ff5500;
 }
 
 .header{
@@ -105,28 +106,30 @@ h2{
 #info h2{
     display: inline;
     position: absolute;
-    top: 80px;
+    top: 60px;
 }
 
 #info p{
     display: inline-block;
     width: 600px;
     position: relative;
-    bottom: 75px;
+    bottom: 95px;
+}
+#info .btn{
+    position: relative;
+    bottom: 30px;
+    right: 610px;
 }
 
 #info img{
     width: 525px;
-    position: relative;
-    top: 0px;
-    left: 100px;
 }
 
 .functions{
     display: inline-block;
     width: 645px;
     position: relative;
-    top: 30px;
+    top: 40px;
     margin-bottom: 30px;
 }
 
@@ -177,4 +180,58 @@ h2{
     position: relative;
     right: 410px;
     bottom: 60px;
+}
+
+#help{
+    width: 1300px;
+    height: 295px;
+}
+
+.btn-send{
+    background-color: #ff5500;
+    color: #fff;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+
+.form-style{
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    padding: 10px 10px;
+}
+
+.form input{
+    position: relative;
+    width: 600px;
+    margin: 0 20px 0 0;
+    top: 30px;
+}
+
+.form select{
+    display: block;
+    position: relative;
+    top: 40px;
+    width: 1275px;
+}
+
+.form textarea{
+    display: block;
+    position: relative;
+    top: 60px;
+    width: 1255px;
+    height: 40px;
+    resize: none;
+}
+
+.form .btn-send{
+    position: relative;
+    top: 80px;
+}
+
+.form .btn{
+    position: relative;
+    top: 80px;
 }
