@@ -6,6 +6,15 @@ h2{
     font-size: 30px;
 }
 
+.btn{
+    background-color: #ff5500;
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 .header{
     display: block;
     position: relative;
@@ -83,11 +92,9 @@ h2{
 }
 
 .section{
-    display: block;
     position: relative;
     left: 50px;
     margin: 50px 0px;
-    width: 1300px;
 }
 
 #info{
@@ -138,4 +145,36 @@ h2{
 .functions i{
     font-size: 75px;
     float: left;
+}
+
+#list{
+    width: 1300px;
+    height: 400px;
+}
+
+#list h2{
+    display: inline;
+    position: absolute;
+    top: 80px;
+}
+
+#list ul{
+    display: inline-block;
+    width: 400px;
+    position: relative;
+    bottom: 130px;
+    left: 15px;
+}
+
+#list img{
+    width: 525px;
+    position: relative;
+    top: 0px;
+    left: 250px;
+}
+
+#list .btn{
+    position: relative;
+    right: 410px;
+    bottom: 60px;
 }
