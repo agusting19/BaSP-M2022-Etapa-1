@@ -115,13 +115,13 @@ h2{
 
 #info p{
     display: inline-block;
-    width: 390px;
+    width: 35%;
     position: relative;
     bottom: 80px;
 }
 #info .btn{
     position: relative;
-    right: 400px;
+    right: 35%;
     bottom: 30px;
 }
 
@@ -129,27 +129,32 @@ h2{
     width: 525px;
 }
 
-.functions{
+#functionalities{
+    width: 80%;
+    height: 300px;
+}
+
+#functionalities div{
     display: inline-block;
-    width: 645px;
+    width: 49%;
     position: relative;
-    top: 40px;
+    top: 30px;
     margin-bottom: 30px;
 }
 
-.functions h3{
+#functionalities h3{
     display: inline;
     position: relative;
     left: 30px;
 }
 
-.functions p{
-    width: 450px;
+#functionalities p{
+    width: 85%;
     position: relative;
     left: 30px;
 }
 
-.functions i{
+#functionalities i{
     font-size: 75px;
     float: left;
 }
