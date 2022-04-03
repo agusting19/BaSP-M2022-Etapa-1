@@ -260,3 +260,25 @@ h2{
     left: 540px;
     bottom: 140px;
 }
+
+#lists{
+    width: 1300px;
+    height: 200px;
+}
+
+#lists div{
+    display: inline-block;
+    margin: 0px 100px;
+    position: relative;
+    top: 30px;
+}
+
+#lists div ol{
+    position: relative;
+    left: 20px;
+    top: 20px
+}
+
+#lists div li{
+    margin: 10px;
+}
