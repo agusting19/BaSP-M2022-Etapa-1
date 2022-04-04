@@ -2,8 +2,15 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
+h1{
+    font-size: 36px;
+    top: 32px;
+    left: 50px;
+    color: #000;
+}
+
 h2{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .btn{
@@ -18,24 +25,16 @@ h2{
 
 .header{
     display: block;
-    position: relative;
     background-color: #fff;
     height: 100px;
     border-bottom: 5px solid #ff5500;
-    width: 85%;
-    left: 15%;
+    width: 100%;
+    clear: both;
 }
 
-.header h1, .header-ul, .header-ul-li, .icon{
+.header h1, .header-ul-li, .icon{
     display: inline;
     position: relative;
-}
-
-.header h1{
-    font-size: 36px;
-    top: 32px;
-    left: 50px;
-    color: #000;
 }
 
 .icon{
@@ -46,21 +45,21 @@ h2{
 }
 
 .header-ul{
+    position: absolute;
     top: 60px;
-    left: 530px;
+    right: 20px;
 }
 
 .header-ul-li i{
     color: #000;
+    font-size: 20px;
     margin-left: 20px;
 }
 
 .sidebar{
-    position: absolute;
-    height: 2685px;
+    float: left;
+    height: 2030px;
     width: 15%;
-    left: 0px;
-    top: 0px;
     background-color: #ccc;
 }
 
@@ -69,77 +68,84 @@ h2{
     height: 35px;
     border: 1px solid #333;
     border-radius: 5px;
-    position: relative;
-    top: 35px;
-    left: 10px;
+    margin: 35px 0px 0px 10px;
 }
 
 .menu{
-    position: relative;
-    top: 150px;
-    left: 20px;
+    margin: 100px 0px 0px 20px;
     width: 80%;
     height: 200px;
 }
 
 .menu ul{
-    position: relative;
-    top: 40px
+    margin-top: 30px;
 }
 
 .menu li{
     margin-bottom: 20px;
 }
 
-#content{
+main{
     position: relative;
     left: 15%;
+    width: 85%;
 }
 
-.section{
+section{
     position: relative;
-    left: 40px;
-    margin: 50px 0px;
+    margin: 50px 0px 50px 40px;
 }
+
+/*What is trackgenix*/
 
 #info{
-    width: 80%;
     height: 350px;
+    width: 95%;
 }
 
 #info h2{
-    display: inline;
     position: absolute;
-    top: 20px;
+    top: 40px;
 }
 
 #info p{
-    display: inline-block;
-    width: 35%;
-    position: relative;
-    bottom: 80px;
-}
-#info .btn{
-    position: relative;
-    right: 35%;
-    bottom: 30px;
+    width: 45%;
+    position: absolute;
+    top: 80px;
+    left: 0px;
 }
 
 #info img{
     width: 525px;
+    float: right;
 }
 
+#info .btn{
+    position: absolute;
+    left: 0px;
+    bottom: 40px;
+}
+
+
+/*Functionalities*/
+
 #functionalities{
-    width: 80%;
-    height: 300px;
+    height: 100%;
+    width: 95%;
+}
+
+#functionalities h2{
+    position: relative;
+    right: 15%;
 }
 
 #functionalities div{
     display: inline-block;
-    width: 49%;
+    width: 40%;
     position: relative;
     top: 30px;
     margin-bottom: 30px;
+    right: 15%;
 }
 
 #functionalities h3{
@@ -149,7 +155,7 @@ h2{
 }
 
 #functionalities p{
-    width: 85%;
+    width: 95%;
     position: relative;
     left: 30px;
 }
@@ -159,41 +165,95 @@ h2{
     float: left;
 }
 
+/*Why Trackgenix*/
+
 #list{
-    width: 1300px;
-    height: 400px;
+    height: 350px;
+    width: 95%;
 }
 
 #list h2{
-    display: inline;
     position: absolute;
-    top: 80px;
+    top: 60px;
 }
 
 #list ul{
-    display: inline-block;
-    width: 400px;
-    position: relative;
-    bottom: 130px;
+    width: 45%;
+    position: absolute;
+    top: 100px;
     left: 15px;
 }
 
 #list img{
     width: 525px;
-    position: relative;
-    top: 0px;
-    left: 250px;
+    float: right;
 }
 
 #list .btn{
-    position: relative;
-    right: 410px;
-    bottom: 60px;
+    position: absolute;
+    left: 0px;
+    bottom: 100px;
 }
 
+/*about us*/
+
 #help{
-    width: 1300px;
+    width: 95%;
     height: 295px;
+    position: relative;
+}
+
+#help h2{
+    position: absolute;
+}
+
+#help input, #help textarea, #help select{
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #bbb;
+    padding: 10px 10px;
+}
+
+#help form{
+    display: inline;
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    width: 95%;
+    height: 80%;
+}
+
+#help form input{
+    width: 45%;
+    margin-right: 20px;
+}
+
+#help form select{
+    width: 97%;
+    position: relative;
+    top: 10px;
+}
+
+#help form textarea{
+    display: block;
+    position: absolute;
+    top: 100px;
+    width: 95%;
+    height: 40px;
+    resize: none;
+}
+
+#help form .btn-send{
+    position: absolute;
+    top: 170px;
+    display: block;
+}
+
+#help form .btn{
+    position: absolute;
+    top: 170px;
+    left: 180px;
+    display: block;
 }
 
 .btn-send{
@@ -205,101 +265,70 @@ h2{
     border-radius: 5px;
 }
 
-.form-style{
-    background-color: #fff;
-    border-radius: 5px;
-    border: 1px solid #bbb;
-    padding: 10px 10px;
-}
-
-.form input{
-    position: relative;
-    width: 600px;
-    margin: 0 20px 0 0;
-    top: 30px;
-}
-
-.form select{
-    display: block;
-    position: relative;
-    top: 40px;
-    width: 1275px;
-}
-
-.form textarea{
-    display: block;
-    position: relative;
-    top: 60px;
-    width: 1255px;
-    height: 40px;
-    resize: none;
-}
-
-.form .btn-send{
-    position: relative;
-    top: 80px;
-}
-
-.form .btn{
-    position: relative;
-    top: 80px;
-}
+/*Our history*/
 
 #history{
-    width: 1300px;
+    width: 95%;
     height: 320px;
+    position: relative;
 }
 
 #history h2{
-    position: relative;
+    position: absolute;
     top: 0px;
     left: 0px;
 }
 
 #history img{
-    position: relative;
+    position: absolute;
     top: 30px;
     width: 550px;
+    left: 0px;
 }
 
 #history p{
     display: block;
-    position: relative;
-    width: 650px;
+    position: absolute;
+    width: 40%;
     left: 600px;
-    bottom: 140px;
+    top: 60px;
 }
 
+/*Listas*/
+
 #lists{
-    width: 1300px;
-    height: 200px;
+    width: 95%;
+    height: 120px;
+    position: relative;
 }
 
 #lists div{
     display: inline-block;
-    margin: 0px 110px;
     position: relative;
-    top: 30px;
+    top: 0px;
+    width: 25%;
 }
 
-#lists div ol{
+#lists ol{
     position: relative;
-    left: 20px;
-    top: 20px
+    left: 25px;
+    margin: 10px 0px;
 }
 
-#lists div li{
-    margin: 10px;
+#lists li{
+    margin: 5px 0px;
 }
+
+
+/*Footer*/
 
 .footer{
     display: block;
-    position: relative;
     background-color: #fff;
     height: 100px;
-    width: 85%;
-    left: 15%;
+    width: 100%;
     border-top: 5px solid #ff5500;
+    clear: both;
 }
 
 .footer-ul, .footer-ul-li{
