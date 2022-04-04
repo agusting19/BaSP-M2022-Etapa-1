@@ -96,8 +96,6 @@ section{
     margin: 50px 0px 50px 40px;
 }
 
-/*What is trackgenix*/
-
 #info{
     height: 350px;
     width: 95%;
@@ -125,9 +123,6 @@ section{
     left: 0px;
     bottom: 40px;
 }
-
-
-/*Functionalities*/
 
 #functionalities{
     height: 100%;
@@ -165,8 +160,6 @@ section{
     float: left;
 }
 
-/*Why Trackgenix*/
-
 #list{
     height: 350px;
     width: 95%;
@@ -194,8 +187,6 @@ section{
     left: 0px;
     bottom: 100px;
 }
-
-/*about us*/
 
 #help{
     width: 95%;
@@ -265,8 +256,6 @@ section{
     border-radius: 5px;
 }
 
-/*Our history*/
-
 #history{
     width: 95%;
     height: 320px;
@@ -294,8 +283,6 @@ section{
     top: 60px;
 }
 
-/*Listas*/
-
 #lists{
     width: 95%;
     height: 120px;
@@ -319,9 +306,6 @@ section{
     margin: 5px 0px;
 }
 
-
-/*Footer*/
-
 .footer{
     display: block;
     background-color: #fff;
@@ -329,16 +313,19 @@ section{
     width: 100%;
     border-top: 5px solid #ff5500;
     clear: both;
-}
-
-.footer-ul, .footer-ul-li{
-    display: inline;
     position: relative;
 }
 
 .footer-ul{
     top: 30px;
-    left: 420px;
+    left: 45%;
+    display: inline;
+    position: absolute;
+}
+
+.footer-ul-li{
+    display: inline;
+    position: relative;
 }
 
 .footer-ul-li i{
@@ -348,8 +335,8 @@ section{
 
 .footer p{
     font-weight: bold;
-    position: relative;
-    top: 50px;
-    left: 100px;
+    position: absolute;
+    top: 60px;
+    left: 35%;
     display: inline-block;
 }
