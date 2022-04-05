@@ -59,7 +59,7 @@ h2{
 
 .sidebar{
     float: left;
-    height: 2030px;
+    height: 2180px;
     width: 15%;
     background-color: #ccc;
 }
@@ -97,8 +97,12 @@ section{
     margin: 50px 0px 50px 40px;
 }
 
+section:not(:last-child) {
+    box-shadow: inset 0px -2px 0 0 #aaa;
+}
+
 #info{
-    height: 350px;
+    height: 400px;
     width: 95%;
 }
 
@@ -110,7 +114,7 @@ section{
 #info p{
     width: 45%;
     position: absolute;
-    top: 80px;
+    top: 100px;
     left: 0px;
 }
 
@@ -126,20 +130,19 @@ section{
 }
 
 #functionalities{
-    height: 100%;
+    height: 280px;
     width: 95%;
 }
 
 #functionalities h2{
-    position: relative;
-    right: 15%;
+    position: absolute;
 }
 
 #functionalities div{
     display: inline-block;
     width: 40%;
     position: relative;
-    top: 30px;
+    top: 50px;
     margin-bottom: 30px;
     right: 15%;
 }
@@ -162,19 +165,19 @@ section{
 }
 
 #list{
-    height: 350px;
+    height: 400px;
     width: 95%;
 }
 
 #list h2{
     position: absolute;
-    top: 60px;
+    top: 80px;
 }
 
 #list ul{
     width: 45%;
     position: absolute;
-    top: 100px;
+    top: 120px;
     left: 15px;
 }
 
@@ -186,12 +189,12 @@ section{
 #list .btn{
     position: absolute;
     left: 0px;
-    bottom: 100px;
+    bottom: 80px;
 }
 
 #help{
     width: 95%;
-    height: 295px;
+    height: 310px;
     position: relative;
 }
 
@@ -210,40 +213,39 @@ section{
     display: inline;
     position: absolute;
     top: 40px;
-    left: 10px;
-    width: 95%;
-    height: 80%;
+    left: 0px;
+    width: 100%;
+    height: 270px;
 }
 
 #help form input{
-    width: 45%;
-    margin-right: 20px;
+    width: 48%;
 }
 
 #help form select{
-    width: 97%;
+    width: 100%;
     position: relative;
-    top: 10px;
+    top: 15px;
 }
 
 #help form textarea{
     display: block;
     position: absolute;
-    top: 100px;
-    width: 95%;
+    top: 105px;
+    width: 98%;
     height: 40px;
     resize: none;
 }
 
 #help form .btn-send{
     position: absolute;
-    top: 170px;
+    top: 185px;
     display: block;
 }
 
 #help form .btn{
     position: absolute;
-    top: 170px;
+    top: 185px;
     left: 180px;
     display: block;
 }
@@ -260,7 +262,6 @@ section{
 #history{
     width: 95%;
     height: 320px;
-    position: relative;
 }
 
 #history h2{
