@@ -29,6 +29,8 @@ a{
     border: 1px solid #ff5500;
 }
 
+/*HEADER*/
+
 .header{
     display: block;
     background-color: #fff;
@@ -62,6 +64,8 @@ a{
     margin-left: 20px;
 }
 
+/*SIDEBAR*/
+
 .sidebar{
     float: left;
     height: 2180px;
@@ -91,6 +95,8 @@ a{
     margin-bottom: 20px;
 }
 
+/*SECTIONS*/
+
 main{
     position: relative;
     left: 15%;
@@ -105,6 +111,8 @@ section{
 section:not(:last-child){
     box-shadow: inset 0px -2px 0 0 #aaa;
 }
+
+/*WHAT IS TRACKGENIX*/
 
 #info{
     height: 400px;
@@ -133,6 +141,8 @@ section:not(:last-child){
     left: 0px;
     bottom: 40px;
 }
+
+/*FUNCTIONALITIES*/
 
 #functionalities{
     height: 280px;
@@ -169,6 +179,8 @@ section:not(:last-child){
     float: left;
 }
 
+/*WHY TRACKGENIX*/
+
 #list{
     height: 400px;
     width: 95%;
@@ -196,6 +208,8 @@ section:not(:last-child){
     left: 0px;
     bottom: 80px;
 }
+
+/*HOW CAN WE HELP YOU*/
 
 #help{
     width: 95%;
@@ -264,6 +278,8 @@ section:not(:last-child){
     border-radius: 5px;
 }
 
+/*OUR HISTORY*/
+
 #history{
     width: 95%;
     height: 320px;
@@ -290,6 +306,8 @@ section:not(:last-child){
     top: 60px;
 }
 
+/*PRODUCTS - COMPANY - SUPPORT*/
+
 #lists{
     width: 95%;
     height: 120px;
@@ -312,6 +330,8 @@ section:not(:last-child){
 #lists li{
     margin: 5px 0px;
 }
+
+/*FOOTER*/
 
 .footer{
     display: block;
