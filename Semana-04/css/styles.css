@@ -1,0 +1,47 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+h1{
+    font-size: 30px;
+}
+
+h2{
+    font-size: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+body{
+    background-color: #ffffffff;
+}
+
+.btn{
+    background-color: #fff;
+    color: #ff5500;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #ff5500;
+}
+
+.btn-search{
+    width: 90%;
+    height: 35px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 35px 0px 0px 10px;
+}
+
+.btn-send{
+    background-color: #ff5500;
+    color: #fff;
+    height: 40px;
+    font-size: 20px;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
