@@ -14,13 +14,17 @@ main section{
     margin: 30px auto;
 }
 
-.texto h2, .texto p, .texto .btn{
+.texto h2, .texto p{
     margin: 20px 0px;
     text-align: left;
 }
 
 #info .texto{
     order: 1;
+}
+
+.texto .btn{
+    display: none;
 }
 
 #info img{
@@ -81,16 +85,18 @@ main section{
     margin-top: 10px;
 }
 
-
-
-#lists{
-    margin: 0% 25%;
-}
-
-#lists div{
+#lists div {
     margin: 15px 0px;
 }
 
 #lists li{
-    margin: 10px 0px;
+    margin: 10px 0px 10px 10%;
+}
+
+@media (min-width: 480px){
+    .texto .btn{
+        display: inline;
+        margin: 20px 0px;
+        text-align: left;
+    }
 }

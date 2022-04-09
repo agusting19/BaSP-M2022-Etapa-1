@@ -1,0 +1,27 @@
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    height: 100px;
+    width: 100%;
+    border-top: 5px solid #ff5500;
+    clear: both;
+}
+
+.footer-ul{
+    margin-bottom: 10px;
+}
+
+.footer-ul-li{
+    display: inline;
+}
+
+.footer-ul-li i{
+    color: #000;
+}
+
+.footer p{
+    max-width: 90%
+}
