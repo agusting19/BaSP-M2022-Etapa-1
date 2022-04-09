@@ -13,22 +13,42 @@
 }
 
 .header-tittle{
-    width: 70%;
+    width: 100%;
     margin: auto;
 }
 
 .header-list{
-    width: 30%;
-    margin: 10px 0px;
-    text-align: center;
+    display: none;
 }
 
 h1{
-    font-size: 8vw;
+    font-size: 10vw;
 }
 
 .icon{
-    font-size: 7vw;
+    font-size: 9vw;
     color: #ff5500;
-    margin: 0px 10px;
+    margin: 0px 25px;
+}
+
+@media (min-width: 480px){
+    h1{
+        font-size: 8vw;
+    }
+
+    .icon{
+        font-size: 7vw;
+    }
+
+    .header-tittle{
+        width: 70%;
+        margin: auto;
+    }
+
+    .header-list{
+        display: inline;
+        width: 30%;
+        margin-top: 10px;
+        text-align: center;
+    }
 }

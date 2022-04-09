@@ -9,6 +9,7 @@
         <link rel="stylesheet" type="text/css" href="./css/reset.css">
         <link rel="stylesheet" href="/css/styles.css">
         <link rel="stylesheet" href="/css/header.css">
+        <link rel="stylesheet" href="/css/main.css">
         <script src="https://kit.fontawesome.com/8bedfba391.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -27,7 +28,7 @@
                 </ul>
             </div>
         </header>
-        <!-- <nav class="sidebar">
+        <aside class="sidebar">
             <button class="btn-search">Search</button>
             <div class="menu">
                 <h2>Menu</h2>
@@ -38,40 +39,42 @@
                     <li><a href="#">Contact Info</a></li>
                 </ul>
             </div>
-        </nav>
+        </aside>
         <main>
             <section id="info">
-                <h2>What is Trackgenix?</h2>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam quam quisquam esse, ducimus molestias, quae cupiditate obcaecati sed, nisi animi eius asperiores quas quidem ad distinctio atque velit impedit cum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt tempore delectus fugiat est fuga harum nisi quasi rem, veniam quas doloribus optio non officiis consectetur odit totam praesentium illum autem nulla maxime unde velit esse. Eius consectetur inventore temporibus id.
-                </p>
-                <button class="btn">Learn More</button>
+                <div class="texto">
+                    <h2>What is Trackgenix?</h2>
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam quam quisquam esse, ducimus molestias, quae cupiditate obcaecati sed, nisi animi eius asperiores quas quidem ad distinctio atque velit impedit cum. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt tempore delectus fugiat est fuga harum nisi quasi rem, veniam quas doloribus optio non officiis consectetur odit totam praesentium illum autem nulla maxime unde velit esse. Eius consectetur inventore temporibus id.
+                    </p>
+                    <button class="btn">Learn More</button>
+                </div>
                 <img alt="Image" src="Images/first.jpg">
             </section>
             <section id="functionalities">
                 <h2>Functionalities</h2>
-                <div>
+                <div class="function">
                     <i class="fa-solid fa-pen"></i>
                     <h3>Hours log</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eligendi consequatur inventore asperiores illo atque at.
                     </p>
                 </div>
-                <div>
+                <div class="function">
                     <i class="fa-solid fa-folder"></i>
                     <h3>Resource management</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eligendi consequatur inventore asperiores illo atque at.
                     </p>
                 </div>
-                <div>
+                <div class="function">
                     <i class="fa-solid fa-file-lines"></i>
                     <h3>Reports</h3>
                     <p>
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae eligendi consequatur inventore asperiores illo atque at.
                     </p>
                 </div>
-                <div>
+                <div class="function">
                     <i class="fa-solid fa-clipboard-check"></i>
                     <h3>Multiple Roles</h3>
                     <p>
@@ -80,14 +83,16 @@
                 </div>
             </section>
             <section id="list">
-                <h2>Why Trackgenix?</h2>
-                <ul>
-                    <li>Productivity booster</li>
-                    <li>Work traceability</li>
-                    <li>Leadership and team management</li>
-                    <li>Decision making</li>
-                </ul>
-                <button class="btn">More</button>
+                <div>
+                    <h2>Why Trackgenix?</h2>
+                    <ul>
+                        <li>Productivity booster</li>
+                        <li>Work traceability</li>
+                        <li>Leadership and team management</li>
+                        <li>Decision making</li>
+                    </ul>
+                    <button class="btn">More</button>
+                </div>
                 <img alt="Image" src="Images/second.jpg">
             </section>
             <section id="help">
@@ -107,15 +112,17 @@
                 </form>
             </section>
             <section id="history">
-                <h2>Our History</h2>
+                <div>
+                    <h2>Our History</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, consequuntur, beatae labore dolores a asperiores quo recusandae deserunt animi in iure non voluptatibus nulla accusamus dignissimos magnam, aperiam eius nobis!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nam excepturi voluptas voluptatibus fuga tempore, sit numquam veritatis sed. Accusantium tempora iure eaque cupiditate reiciendis eum nam ipsa eveniet magnam?
+                    </p>
+                </div>
                 <img alt="Image" src="Images/third.jpg">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste, consequuntur, beatae labore dolores a asperiores quo recusandae deserunt animi in iure non voluptatibus nulla accusamus dignissimos magnam, aperiam eius nobis!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nam excepturi voluptas voluptatibus fuga tempore, sit numquam veritatis sed. Accusantium tempora iure eaque cupiditate reiciendis eum nam ipsa eveniet magnam?
-                </p>
             </section>
             <section id="lists">
-                <div class="list1">
+                <div>
                     <h2>Products</h2>
                     <ol>
                         <li><a href="#">Functionalities</a></li>
@@ -124,7 +131,7 @@
                         <li><a href="#">Additional features</a></li>
                     </ol>
                 </div>
-                <div class="list2">
+                <div>
                     <h2>Company</h2>
                     <ol>
                         <li><a href="#">About us</a></li>
@@ -133,7 +140,7 @@
                         <li><a href="#">Blog</a></li>
                     </ol>
                 </div>
-                <div class="list3">
+                <div>
                     <h2>Support</h2>
                     <ol>
                         <li><a href="#">Help</a></li>
@@ -144,7 +151,7 @@
                 </div>
             </section>
         </main>
-        <footer class="footer">
+        <!-- <footer class="footer">
             <ul class="footer-ul">
                 <li class="footer-ul-li"><a href="#"><i class="fa-brands fa-facebook-square"></i></a></li>
                 <li class="footer-ul-li"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>

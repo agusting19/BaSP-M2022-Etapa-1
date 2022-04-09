@@ -1,0 +1,96 @@
+aside{
+    display: none;
+}
+
+main section{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 30px 0px;
+}
+
+#info, #functionalities, #list, #help, #history, #lists{
+    width: 90%;
+    margin: 30px auto;
+}
+
+.texto h2, .texto p, .texto .btn{
+    margin: 20px 0px;
+    text-align: left;
+}
+
+#info .texto{
+    order: 1;
+}
+
+#info img{
+    width: 100%;
+    order: 0;
+}
+
+.function{
+    margin: 20px 0px;
+}
+
+.function i{
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.function h2, .function p{
+    margin: 10px 0px;
+}
+
+#list img{
+    order: 0;
+}
+
+#list div{
+    order: 1;
+}
+
+#list h2, #list ul, #list .btn{
+    margin: 10px 0px;
+}
+
+#help form input, #help form textarea{
+    width: 98%;
+    margin: 10px 0px;
+
+}
+
+#help form select{
+    width: 100%;
+    margin: 10px 0px;
+}
+
+#help .btn{
+    margin-left: 10px;
+}
+
+#history img{
+    order: 0;
+}
+
+#history div{
+    order: 1;
+    margin: 20px 0px;
+}
+
+#history div p{
+    margin-top: 10px;
+}
+
+
+
+#lists{
+    margin: 0% 25%;
+}
+
+#lists div{
+    margin: 15px 0px;
+}
+
+#lists li{
+    margin: 10px 0px;
+}
