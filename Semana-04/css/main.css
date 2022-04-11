@@ -99,6 +99,7 @@ main section {
 
 #list div{
     order: 1;
+    margin-top: 10px;
 }
 
 #list h2, #list ul, #list .btn{
@@ -166,7 +167,8 @@ main section {
     #lists{
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: flex-start;
+        justify-content: space-evenly;
+        margin: auto;
     }
 
     #lists div{
@@ -194,4 +196,21 @@ main section {
         order: 1;
     }
 
+    #functionalities .functions{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 10px;
+    }
+
+    .functions .function{
+        display: flex;
+        flex-direction: column;
+        width: 45%;
+    }
+
+    .function i{
+        font-size: 60px;
+        margin: 15px auto;
+    }
 }
