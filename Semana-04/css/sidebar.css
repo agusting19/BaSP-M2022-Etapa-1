@@ -1,0 +1,37 @@
+#sidebar{
+    display: none;
+}
+
+#sidebar{
+    height: 100%;
+    width: 40%;
+    background-color: #ccc;
+}
+
+.btn-search{
+    width: 90%;
+    height: 30px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 35px 0px 0px 10px;
+}
+
+.menu{
+    margin: 80px 0px 0px 20px;
+    width: 80%;
+    height: 200px;
+}
+
+.menu ul{
+    margin-top: 30px;
+}
+
+.menu li{
+    margin: 0px 0px 20px 5%
+}
+
+@media screen and (min-width: 1025px) {
+    #sidebar{
+        display: block;
+    }
+}
