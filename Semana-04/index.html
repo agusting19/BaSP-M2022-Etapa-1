@@ -15,7 +15,7 @@
     </head>
     <body>
         <header class="header">
-            <div class="header-tittle">
+            <div class="header-title">
                 <i class="fa-solid fa-bars icon"></i>
                 <h1>Trackgenix</h1>
             </div>
@@ -29,7 +29,7 @@
                 </ul>
             </div>
         </header>
-        <aside class="sidebar">
+        <aside id="sidebar">
             <button class="btn-search">Search</button>
             <div class="menu">
                 <h2>Menu</h2>
@@ -99,15 +99,17 @@
             <section id="help">
                 <h2>How can we help you?</h2>
                 <form>
-                    <input placeholder="Name" type="text">
-                    <input placeholder="Email" type="email">
-                    <select>
-                        <option>Select Area</option>
-                        <option>Human Resources</option>
-                        <option>System</option>
-                        <option>Commercialization</option>
-                    </select>
-                    <textarea placeholder="Enter your message"></textarea>
+                    <div class="inputs">
+                        <input placeholder="Name" type="text">
+                        <input placeholder="Email" type="email">
+                        <select>
+                            <option>Select Area</option>
+                            <option>Human Resources</option>
+                            <option>System</option>
+                            <option>Commercialization</option>
+                        </select>
+                        <textarea placeholder="Enter your message"></textarea>
+                    </div>
                     <button type="submit" class="btn-send">Send Message</button>
                     <button type="reset" class="btn">Reset</button>
                 </form>

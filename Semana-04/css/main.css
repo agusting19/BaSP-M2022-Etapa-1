@@ -1,21 +1,61 @@
-aside{
+/* Sidebar */
+
+#sidebar{
     display: none;
+    z-index: 100;
 }
 
-main section{
+#sidebar{
+    position: fixed;
+    height: 100%;
+    width: 40%;
+    background-color: #ccc;
+}
+
+.btn-search{
+    width: 90%;
+    height: 30px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    margin: 35px 0px 0px 10px;
+}
+
+.menu{
+    margin: 80px 0px 0px 20px;
+    width: 80%;
+    height: 200px;
+}
+
+.menu ul{
+    margin-top: 30px;
+}
+
+.menu li{
+    margin: 0px 0px 20px 5%
+}
+
+/* Body */
+
+main section {
     height: auto;
-    display: flex;
-    flex-direction: column;
-    margin: 30px 0px;
+    padding: 30px 0px;
 }
 
 #info, #functionalities, #list, #help, #history, #lists{
     width: 90%;
     margin: 30px auto;
+    z-index: 0;
 }
 
+#info, #list, #history, #lists{
+    display: flex;
+    flex-direction: column;
+}
+
+/* What is trackgenix */
+
 .texto h2, .texto p{
-    margin: 20px 0px;
+    margin: 20px 20px 0px 0px;
     text-align: left;
 }
 
@@ -32,8 +72,10 @@ main section{
     order: 0;
 }
 
+/* Functionalities */
+
 .function{
-    margin: 20px 0px;
+    padding: 20px 0px;
 }
 
 .function i{
@@ -42,7 +84,13 @@ main section{
 }
 
 .function h2, .function p{
-    margin: 10px 0px;
+    padding: 10px 0px;
+}
+
+/* Why Trackgenix */
+
+#list{
+    padding: 10px 0px;
 }
 
 #list img{
@@ -57,20 +105,28 @@ main section{
     margin: 10px 0px;
 }
 
-#help form input, #help form textarea{
-    width: 98%;
+#list ul{
+    margin-left: 5%;
+}
+
+/* How can we help you */
+
+#help{
+    padding-bottom: 20px;
+}
+
+#help .inputs{
+    display: flex;
+    flex-direction: column;
     margin: 10px 0px;
-
 }
 
-#help form select{
-    width: 100%;
+#help form input, #help form select, #help form textarea, #help .btn, #help .btn-search{
+    padding: 10px 10px;
     margin: 10px 0px;
 }
 
-#help .btn{
-    margin-left: 10px;
-}
+/* Our history */
 
 #history img{
     order: 0;
@@ -85,18 +141,57 @@ main section{
     margin-top: 10px;
 }
 
+
+/* Listas */
+
 #lists div {
     margin: 15px 0px;
 }
 
 #lists li{
-    margin: 10px 0px 10px 10%;
+    margin: 10px 0px;
 }
 
-@media (min-width: 480px){
+@media screen and (min-width: 480px){
     .texto .btn{
         display: inline;
         margin: 20px 0px;
         text-align: left;
     }
+
+    /* #sidebar{
+        display: inline-block;
+    } */
+
+    #lists{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    #lists div{
+        min-width: 240px;
+    }
+}
+
+/* @media screen and (min-width: 768px){
+    #sidebar{
+        width: 30%;
+    }
+} */
+
+@media screen and (min-width: 1024px) {
+    #info{
+        flex-direction: row;
+    }
+
+    #info .texto{
+        order: 0;
+        width: 80%;
+    }
+
+    #info img{
+        order: 1;
+    }
+
 }
