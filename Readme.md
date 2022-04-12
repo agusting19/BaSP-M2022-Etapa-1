@@ -35,4 +35,6 @@ Week objective: Leave the page pretty as the figma template with a css file.
 
 ## Week 4
 
-?
+Once we saw flexbox, we had to aplied that knowledge to the css.
+
+Week objetive: Make the page mobile first and fully responsive with flexboxes.
