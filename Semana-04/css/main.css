@@ -143,6 +143,10 @@ main section {
     #lists div{
         min-width: 220px;
     }
+
+    #help form input{
+        width: 44%;
+    }
 }
 
 @media screen and (min-width: 768px){
@@ -181,9 +185,4 @@ main section {
         width: 30%;
         margin: 10px;
     }
-
-    #help form input{
-        width: 45%;
-    }
-
 }
