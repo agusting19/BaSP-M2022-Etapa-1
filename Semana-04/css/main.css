@@ -42,17 +42,21 @@ main section {
 
 /* Functionalities */
 
+#functionalities{
+    display: flex;
+    flex-direction: column;
+}
+
 .function{
-    padding: 20px 0px;
+    width: 100%;
+    margin: 25px auto;
 }
 
 .function i{
     font-size: 35px;
-    margin-bottom: 10px;
-}
-
-.function h2, .function p{
-    padding: 10px 0px;
+    text-align: center;
+    margin: 10px 0px;
+    width: 10%;
 }
 
 /* Why Trackgenix */
@@ -86,11 +90,13 @@ main section {
 
 #help .inputs{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin: 10px 0px;
 }
 
-#help form input, #help form select, #help form textarea, #help .btn, #help .btn-search{
+#help form input, #help form select, #help form textarea{
+    width: 100%;
     padding: 10px 10px;
     margin: 10px 0px;
 }
@@ -162,18 +168,22 @@ main section {
     #functionalities .functions{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
-        margin-top: 10px;
     }
 
-    .functions .function{
+    .function{
         display: flex;
-        flex-direction: column;
+        align-items: center;
         width: 45%;
+        margin: 20px 10px;
     }
 
     .function i{
-        font-size: 60px;
-        margin: 15px auto;
+        width: 30%;
+        margin: 10px;
     }
+
+    #help form input{
+        width: 45%;
+    }
+
 }
