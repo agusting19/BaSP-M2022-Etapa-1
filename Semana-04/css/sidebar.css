@@ -2,12 +2,6 @@
     display: none;
 }
 
-#sidebar{
-    height: 100%;
-    width: 40%;
-    background-color: #ccc;
-}
-
 .btn-search{
     width: 90%;
     height: 30px;
@@ -30,8 +24,17 @@
     margin: 0px 0px 20px 5%
 }
 
+@media screen and (min-width: 768px){
+    #sidebar{
+        display: inline-block;
+        background-color: #ccc;
+        width: 20%;
+        max-width: 250px;
+    }
+}
+
 @media screen and (min-width: 1025px) {
     #sidebar{
-        display: block;
+        max-width: 350px;
     }
 }
