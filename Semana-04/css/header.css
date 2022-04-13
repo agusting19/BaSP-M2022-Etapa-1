@@ -3,8 +3,8 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: #fff;
     height: 100px;
+    background-color: #fff;
     border-bottom: 5px solid #ff5500;
     clear: both;
 }
@@ -23,8 +23,8 @@ h1{
 
 .icon{
     font-size: 9vw;
-    color: #ff5500;
     padding: 0px 30px 10px 30px;
+    color: #ff5500;
 }
 
 @media screen and (min-width: 481px){

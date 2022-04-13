@@ -25,29 +25,29 @@ body{
 }
 
 .btn{
-    background-color: #fff;
-    color: #ff5500;
     height: 40px;
     font-size: 20px;
     padding: 10px 10px;
-    border-radius: 5px;
+    background-color: #fff;
+    color: #ff5500;
     border: 1px solid #ff5500;
+    border-radius: 5px;
 }
 
 .btn-search{
     width: 90%;
     height: 35px;
+    margin: 35px 0px 0px 10px;
     border: 1px solid #333;
     border-radius: 5px;
-    margin: 35px 0px 0px 10px;
 }
 
 .btn-send{
-    background-color: #ff5500;
-    color: #fff;
     height: 40px;
     font-size: 20px;
     padding: 10px 10px;
+    background-color: #ff5500;
+    color: #fff;
     border-radius: 5px;
 }
 

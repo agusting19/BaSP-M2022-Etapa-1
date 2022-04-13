@@ -3,9 +3,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #ffffff;
     height: 100px;
     width: 100%;
+    background-color: #ffffff;
     border-top: 5px solid #ff5500;
     clear: both;
 }

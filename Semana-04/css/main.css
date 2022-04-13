@@ -12,7 +12,6 @@ main section {
 #info, #functionalities, #list, #help, #history, #lists{
     width: 90%;
     margin: 30px auto;
-    z-index: 0;
 }
 
 #info, #list, #history, #lists{
@@ -53,10 +52,10 @@ main section {
 }
 
 .function i{
+    width: 10%;
     font-size: 35px;
     text-align: center;
     margin: 10px 0px;
-    width: 10%;
 }
 
 /* Why Trackgenix */
@@ -184,5 +183,22 @@ main section {
     .function i{
         width: 30%;
         margin: 10px;
+    }
+
+    #history{
+        flex-direction: row;
+    }
+
+    #history img{
+        width: 45%;
+    }
+    
+    #history div{
+        width: 45%;
+        margin: 0px 20px;
+    }
+    
+    #history div p{
+        margin-top: 10px;
     }
 }
