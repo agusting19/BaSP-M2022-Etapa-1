@@ -38,3 +38,9 @@ Week objective: Leave the page pretty as the figma template with a css file.
 Once we saw flexbox, we had to aplied that knowledge to the css.
 
 Week objetive: Make the page mobile first and fully responsive with flexboxes.
+
+## Week 5
+
+On this week we are starting with JavaScript. Doing the basics (Var and operators, strings, arrays, if else, for and functions).
+
+Week objetive: Complete the six exercises of the problematic.
