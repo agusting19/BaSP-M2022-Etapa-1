@@ -3,7 +3,7 @@
 }
 
 h1{
-    font-size: 30px;
+    font-size: 36px;
 }
 
 h2{
@@ -17,6 +17,10 @@ a{
 
 body{
     background-color: #ffffffff;
+}
+
+section:not(:last-child){
+    box-shadow: inset 0px -2px 0 0 #aaa;
 }
 
 .container{
@@ -49,8 +53,4 @@ body{
     background-color: #ff5500;
     color: #fff;
     border-radius: 5px;
-}
-
-section:not(:last-child){
-    box-shadow: inset 0px -2px 0 0 #aaa;
 }

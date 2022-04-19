@@ -71,10 +71,15 @@ main section {
 #list div{
     order: 1;
     margin-top: 10px;
+    width: 100%;
 }
 
 #list h2, #list ul, #list .btn{
-    margin: 10px 0px;
+    margin: 20px 0px;
+}
+
+#list li{
+    margin: 5px 0px;
 }
 
 #list ul{
@@ -118,8 +123,19 @@ main section {
 
 /* Listas */
 
+#lists{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
 #lists div {
     margin: 15px 0px;
+    width: 180px;
+}
+
+#lists ol{
+    padding-left: 20px;
 }
 
 #lists li{
@@ -131,16 +147,6 @@ main section {
         display: inline;
         margin: 20px 0px;
         text-align: left;
-    }
-
-    #lists{
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    #lists div{
-        min-width: 220px;
     }
 
     #help form input{
@@ -183,6 +189,20 @@ main section {
     .function i{
         width: 30%;
         margin: 10px;
+    }
+
+    #list{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #list div{
+        order: 0;
+        width: 50%;
+    }
+
+    #list img{
+        width: 50%;
     }
 
     #history{
