@@ -1,26 +1,26 @@
 //5. For
+console.log('For exercises');
 /*
 a. Crear un array que contenga 5 palabras y recorrer dicho array utilizando un bucle for de
 JavaScript para mostrar una alerta utilizando cada una de las palabras.
 */
+console.log('Exercise 05.a');
 
-var fruits = ['apple', 'watermelon', 'peach', 'orange', 'pear'], i;
+var fruits = ['apple', 'watermelon', 'peach', 'orange', 'pear'];
 
-for(i = 0; i < 5; i++){
-    console.log(fruits[i]);
+for(var i = 0; i < 5; i++){
+    alert(fruits[i]);
 }
 
 /*
 b. Al array anterior convertir la primera letra de cada palabra en mayúscula y mostrar una
 alerta por cada palabra modificada.
 */
+console.log('Exercise 05.b');
 
-for(i = 0; i < 5; i++){
-    firstLetter = fruits[i].substring(0,1);
-    firstLetter = firstLetter.toUpperCase();
-    lastLetters = fruits[i].substring(1);
-    fruits[i] = firstLetter + lastLetters;
-    console.log(fruits[i]);
+for(var i = 0; i < 5; i++){
+    fruits[i] = fruits[i].substring(0,1).toUpperCase() + fruits[i].substring(1);
+    alert(fruits[i]);
 }
 
 /*
@@ -28,13 +28,15 @@ c. Crear una variable llamada “sentence” que tenga un string vacío, luego a
 a) recorrerlo con un bucle for para ir guardando cada palabra dentro de la variable
 sentence. Al final mostrar una única alerta con la cadena completa.
 */
+console.log('Exercise 05.c');
 
-var sentence = '';
+var sentence = ' ';
 
-for(i = 0; i < 5; i++){
+for(var i = 0; i < 5; i++){
     sentence = sentence + fruits[i];
 }
-console.log(sentence);
+
+alert(sentence);
 
 /*
 d. Crear una array vacío y con un bucle for de 10 repeticiones. Llenar el array con el número
@@ -42,10 +44,12 @@ de la repetición, es decir que al final de la ejecución del bucle for debería
 elementos dentro del array, desde el número 0 hasta al número 9. Mostrar por la consola
 del navegador el array final (utilizar console.log).
 */
+console.log('Exercise 05.d');
 
-var emptyArray = [];
+var numbers= [];
 
-for(i = 0; i < 10; i++){
-    emptyArray[i] = i;
+for(var i = 0; i < 10; i++){
+    numbers[i] = i;
 }
-console.log(emptyArray);
+
+console.log(numbers);

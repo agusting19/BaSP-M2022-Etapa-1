@@ -1,8 +1,10 @@
 //1. Variables y Operadores
+console.log('Var and Operator exercises');
 /*
 a. Crear dos variables numéricas y utilizar el operador suma para guardar el valor de la
 suma de ambos números en una 3er variable.
 */
+console.log('Exercise 01.a');
 
 var num1 = 9, num2 = 5, num3;
 
@@ -13,6 +15,7 @@ console.log('The sum of the variables is equal to:' + num3);
 b. Crear dos variables de tipo String y concatenarlas guardando el resultado en una 3er
 variable.
 */
+console.log('Exercise 01.b');
 
 var firstName = 'Agustin', lastName = 'Gomez', fullName;
 
@@ -23,6 +26,7 @@ console.log('My full name is ' + fullName);
 c. Crear dos variables de tipo String y sumar el largo de cada variable (cantidad de letras
 del string) guardando el resultado de la suma en una 3er variable (utilizar length). 
 */
+console.log('Exercise 01.c');
 
 var word1 = 'Radium', word2 = 'Rocket', wordsLength;
 
