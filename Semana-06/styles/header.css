@@ -1,0 +1,41 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    background-color: #fff;
+    border-bottom: 5px solid #ff5500;
+    clear: both;
+}
+
+.header-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon{
+    font-size: 30px;
+    padding: 0px 30px 10px 30px;
+    color: #ff5500;
+}
+
+.header-list {
+    display: none;
+    align-items: flex-end;
+    margin: 0px 20px 20px 0px
+}
+
+.header-ul-li{
+    display: inline;
+}
+
+.header-list i{
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+@media screen and (min-width: 481px){
+    .header-list{
+        display: flex;
+    }
+}

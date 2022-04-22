@@ -1,0 +1,224 @@
+/* Body */
+
+main{
+    width: 100%;
+}
+
+main section {
+    height: auto;
+    padding: 30px 0px;
+}
+
+#info, #functionalities, #list, #help, #history, #lists{
+    width: 90%;
+    margin: 30px auto;
+}
+
+#info, #list, #history, #lists{
+    display: flex;
+    flex-direction: column;
+}
+
+/* What is trackgenix */
+
+.texto h2, .texto p{
+    margin: 20px 20px 0px 0px;
+    text-align: left;
+}
+
+#info .texto{
+    order: 1;
+}
+
+.texto .btn{
+    display: none;
+}
+
+#info img{
+    width: 100%;
+    order: 0;
+}
+
+/* Functionalities */
+
+#functionalities{
+    display: flex;
+    flex-direction: column;
+}
+
+.function{
+    width: 100%;
+    margin: 25px auto;
+}
+
+.function i{
+    width: 10%;
+    font-size: 35px;
+    text-align: center;
+    margin: 10px 0px;
+}
+
+/* Why Trackgenix */
+
+#list{
+    padding: 10px 0px;
+}
+
+#list img{
+    order: 0;
+}
+
+#list div{
+    order: 1;
+    margin-top: 10px;
+    width: 100%;
+}
+
+#list h2, #list ul, #list .btn{
+    margin: 20px 0px;
+}
+
+#list li{
+    margin: 5px 0px;
+}
+
+#list ul{
+    margin-left: 5%;
+}
+
+/* How can we help you */
+
+#help{
+    padding-bottom: 20px;
+}
+
+#help .inputs{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px 0px;
+}
+
+#help form input, #help form select, #help form textarea{
+    width: 100%;
+    padding: 10px 10px;
+    margin: 10px 0px;
+}
+
+/* Our history */
+
+#history img{
+    order: 0;
+}
+
+#history div{
+    order: 1;
+    margin: 20px 0px;
+}
+
+#history div p{
+    margin-top: 10px;
+}
+
+
+/* Listas */
+
+#lists{
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#lists div {
+    margin: 15px 0px;
+    width: 180px;
+}
+
+#lists ol{
+    padding-left: 20px;
+}
+
+#lists li{
+    margin: 10px 0px;
+}
+
+@media screen and (min-width: 481px){
+    .texto .btn{
+        display: inline;
+        margin: 20px 0px;
+        text-align: left;
+    }
+
+    #help form input{
+        width: 44%;
+    }
+}
+
+@media screen and (min-width: 768px){
+    main{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    #info{
+        flex-direction: row;
+    }
+
+    #info .texto{
+        order: 0;
+        width: 80%;
+    }
+
+    #info img{
+        order: 1;
+    }
+
+    #functionalities .functions{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .function{
+        display: flex;
+        align-items: center;
+        width: 45%;
+        margin: 20px 10px;
+    }
+
+    .function i{
+        width: 30%;
+        margin: 10px;
+    }
+
+    #list{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    #list div{
+        order: 0;
+        width: 50%;
+    }
+
+    #list img{
+        width: 50%;
+    }
+
+    #history{
+        flex-direction: row;
+    }
+
+    #history img{
+        width: 45%;
+    }
+    
+    #history div{
+        width: 45%;
+        margin: 0px 20px;
+    }
+    
+    #history div p{
+        margin-top: 10px;
+    }
+}
