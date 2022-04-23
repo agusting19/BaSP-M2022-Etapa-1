@@ -1,0 +1,56 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+main section {
+    max-width: 800px;
+    box-shadow: 5px 5px #dddddd, 5px 5px #dddddd;
+}
+
+#register-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin: 50px auto;
+}
+
+#register-form > h2{
+    margin-bottom: 5%;
+}
+
+#register-form form > input{
+    width: 97%;
+    height: 40px;
+    margin: 10px 0px;
+    background-color: #eeeeee;
+    border: 0;
+}
+
+#register-form div{
+    margin: 10px 0px;
+    width: 100%;
+}
+
+#register-form button{
+    width: 97%;
+    margin: 5% 0px;
+}
+
+@media screen and (min-width: 768px) {
+    #register-form form{
+        display: flex;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    #register-form form > input{
+        width: 43%;
+        height: 40px;
+        margin: 10px 15px;
+    }
+}
