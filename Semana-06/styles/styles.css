@@ -1,5 +1,5 @@
 *{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 h1{
@@ -31,7 +31,7 @@ section:not(:last-child){
 .btn{
     height: 40px;
     font-size: 20px;
-    padding: 10px 10px;
+    padding: 5px 5px;
     background-color: #fff;
     color: #ff5500;
     border: 1px solid #ff5500;
@@ -49,7 +49,6 @@ section:not(:last-child){
 .btn-send{
     height: 40px;
     font-size: 20px;
-    padding: 10px 10px;
     background-color: #ff5500;
     color: #fff;
     border-radius: 5px;

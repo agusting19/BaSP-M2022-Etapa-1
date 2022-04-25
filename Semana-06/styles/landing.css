@@ -21,8 +21,13 @@ main section {
 
 /* What is trackgenix */
 
-.texto h2, .texto p{
+.texto h2{
     margin: 20px 20px 0px 0px;
+    text-align: left;
+}
+
+.texto p{
+    margin: 10px 20px 30px 0px;
     text-align: left;
 }
 
@@ -70,7 +75,7 @@ main section {
 
 #list div{
     order: 1;
-    margin-top: 10px;
+    margin: 15px;
     width: 100%;
 }
 

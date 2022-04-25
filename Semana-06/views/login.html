@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="/styles/login.css">
         <link rel="stylesheet" href="/styles/footer.css">
         <script src="https://kit.fontawesome.com/8bedfba391.js" crossorigin="anonymous"></script>
+        <script src="/javascript/login.js"></script>
     </head>
     <body>
         <header class="header">
@@ -47,13 +48,26 @@
                 <section id="login-form">
                     <h2>Log in</h2>
                     <form action="">
-                        <input placeholder="Email" type="email">
-                        <input placeholder="Passsword" type="password">
+                        <input id="email" placeholder="Email" type="text">
+                        <span class="error"></span>
+                        <input id="password" placeholder="Passsword" type="password">
+                        <span class="error"></span>
                         <div class="checkbox">
                             <input type="checkbox"><label for="vehicle1">Remember Me</label>
                         </div>
-                        <button type="submit" class="btn-send">Countinue</button>
+                        <a href="#">Forgot password?</a>
+                        <button type="submit" class="btn-send">Login</button>
                     </form>
+                </section>
+                <section id="info-sign" class="">
+                    <div id="info-title">
+                        <h2 id="message"></h2>
+                        <i class="fa-solid fa-xmark"></i>
+                    </div>
+                    <div>
+                        <p id="email-message"></p>
+                        <p id="password-message"></p>
+                    </div>
                 </section>
             </main>
         </div>
