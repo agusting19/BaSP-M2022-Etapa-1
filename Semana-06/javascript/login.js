@@ -6,7 +6,7 @@ window.onload = function () {
     var button = document.getElementsByClassName('btn-send');
 
     //Email validation
-    var emailValidated = false;
+    var emailValidated = false; //Se usa para la alerta final
 
     email.addEventListener('blur', emailBlur);
     email.addEventListener('focus', emailFocus);
@@ -27,7 +27,7 @@ window.onload = function () {
     }
 
     //Password Validation
-    var passwordValidated = false;
+    var passwordValidated = false; //Se usa para la alerta final
 
     password.addEventListener('blur', passwordBlur);
     password.addEventListener('focus', passwordFocus);
@@ -37,8 +37,8 @@ window.onload = function () {
         var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
         if(password.value.length == 0){
             span[1].textContent = 'Please enter a password';
-        } else if(password.value.length < 6){
-            span[1].textContent = 'Password is too short'; //si son menos de 6 tira error
+        } else if(password.value.length < 8){
+            span[1].textContent = 'Password is too short'; //si son menos de 8 tira error
         } else{
             var contLetters = 0;
             var contNumbers = 0;
@@ -68,7 +68,7 @@ window.onload = function () {
         span[1].textContent = '';
     }
 
-    //Cartel emergente
+    //Alert sing
     button[0].addEventListener('click', submitClick);
 
     function submitClick(){
