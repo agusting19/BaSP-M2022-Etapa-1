@@ -39,8 +39,20 @@ Once we saw flexbox, we had to aplied that knowledge to the css.
 
 Week objetive: Make the page mobile first and fully responsive with flexboxes.
 
+github pages: https://agusting19.github.io/BaSP-M2022-Etapa-1/Semana-04/index.html
+
 ## Week 5
 
 On this week we are starting with JavaScript. Doing the basics (Var and operators, strings, arrays, if else, for and functions).
 
 Week objetive: Complete the six exercises of the problematic.
+
+github pages: https://agusting19.github.io/BaSP-M2022-Etapa-1/Semana-05/index.html
+
+## Week 6
+
+With the knowledge about JavaScript of the last week we need to add two pages to the web and make validations.
+
+Week objetive: Make the Sing Up and Log In pages with his respectives validations and alerts.
+
+github pages: https://agusting19.github.io/BaSP-M2022-Etapa-1/Semana-06/views/index.html
