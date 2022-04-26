@@ -3,13 +3,11 @@ window.onload = function () {
     var email = document.getElementById('email');
     var span = document.getElementsByClassName('error');
     var password = document.getElementById('password');
-    var button = document.getElementsByClassName('btn-send')
-    var sign = document.getElementById('info-sign');
-    var title = document.getElementById('message');
-    var emailMessage = document.getElementById('email-message');
-    var passwordMessage = document.getElementById('password-message');
+    var button = document.getElementsByClassName('btn-send');
 
     //Email validation
+    var emailValidated = false;
+
     email.addEventListener('blur', emailBlur);
     email.addEventListener('focus', emailFocus);
 
@@ -20,7 +18,7 @@ window.onload = function () {
         } else if(!validEmail.test(email.value)){
             span[0].textContent = 'Please enter a valid email';
         } else{
-            return true;
+            emailValidated = true;
         }
     }
 
@@ -29,6 +27,8 @@ window.onload = function () {
     }
 
     //Password Validation
+    var passwordValidated = false;
+
     password.addEventListener('blur', passwordBlur);
     password.addEventListener('focus', passwordFocus);
 
@@ -42,7 +42,6 @@ window.onload = function () {
         } else{
             var contLetters = 0;
             var contNumbers = 0;
-            var flag = 0; //bandera va a mostrar si hay un valor que no este dentro del arreglo
             for(var i = 0; i < password.value.length; i++){
                 for(var j = 0; j < alphabet.length; j++){
                     if(password.value.charAt(i) == alphabet[j]){
@@ -60,7 +59,7 @@ window.onload = function () {
             } else if(contLetters + contNumbers !== password.value.length){
                 span[1].textContent = 'Password only accept numbers and letters';
             } else{
-                return true;
+                passwordValidated = true;
             }
         }
     }
@@ -70,26 +69,17 @@ window.onload = function () {
     }
 
     //Cartel emergente
-    button.addEventListener('click', showSign);
+    button[0].addEventListener('click', submitClick);
 
-    function showSign(event){
-        event.preventDefault();
-        if(emailBlur == true && passwordBlur == true){
-            sign.classList('shown');
-            title.textContent = 'Login successfull';
-            emailMessage.textContent = 'Email:' + email;
-            passwordMessage.textContent = 'Password:' + password;
+    function submitClick(){
+        if(emailValidated && passwordValidated){
+            alert('Login Successfull \nEmail:' + email.value + '\nPassword:' + password.value);
+        } else if(!emailValidated && !passwordValidated){
+            alert('Error: Email and password incorrect \nEmail:' + email.value + '\nPassword:' + password.value);
+        } else if(!emailValidated){
+            alert('Error: Email incorrect \nEmail:' + email.value + '\nPassword:' + password.value);
         } else{
-            sign.classList('shown');
-            title.textContent = 'Error';
-            if(emailBlur != true){
-                emailMessage.textContent = 'Email:' + email + '(Invalid Email)';
-            } else{
-                emailMessage.textContent = 'Email:' + email;
-            }
-            if(passwordBlur != true){
-                passwordMessage.textContent = 'Password:' + password + '(Invalid Password)';
-            }
+            alert('Error: Password incorrect \nEmail:' + email.value + '\nPassword:' + password.value);
         }
     }
 }

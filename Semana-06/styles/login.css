@@ -58,28 +58,3 @@ span{
     margin: 8% 0px;
     padding: 0px 5px;
 }
-
-#info-sign{
-    display: none;
-    position: absolute;
-    top: auto;
-    left: auto;
-    width: 100%;
-    height: 20%;
-    z-index: 100;
-    background-color: #ff5500;
-    color: #ffffff;
-}
-
-#info-title{
-    display: flex;
-    justify-content: space-between;
-}
-
-#info-title h2, #info-title i{
-    margin: 15px 15px;
-}
-
-.shown{
-    display: block;
-}
