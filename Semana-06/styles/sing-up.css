@@ -6,24 +6,37 @@ main{
 }
 
 main section {
-    max-width: 800px;
-    box-shadow: 5px 5px #dddddd, 5px 5px #dddddd;
-}
-
-#register-form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 800px;
+    margin: 50px 0px;
+    box-shadow: 5px 5px #dddddd, 5px 5px #dddddd;
+}
+
+span{
+    display: block;
+    font-size: 10px;
+    margin-left: 5px;
+    color: #ff2200;
+}
+
+#register-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
     width: 90%;
-    margin: 50px auto;
+    margin: 10px auto;
 }
 
-#register-form > h2{
-    margin-bottom: 5%;
+#register-form div{
+    width: 100%;
+    margin: 10px 0px;
 }
 
-#register-form form > input{
+#register-form div > input{
     width: 97%;
     height: 40px;
     margin: 10px 0px;
@@ -31,26 +44,18 @@ main section {
     border: 0;
 }
 
-#register-form div{
-    margin: 10px 0px;
-    width: 100%;
-}
-
 #register-form button{
     width: 97%;
     margin: 5% 0px;
 }
 
-@media screen and (min-width: 768px) {
-    #register-form form{
-        display: flex;
-        flex-wrap: wrap;
-        width: 90%;
+@media screen and (min-width: 1024px) {
+    #register-form div{
+        width: 43%;
+        margin: 10px 15px;
     }
 
-    #register-form form > input{
-        width: 43%;
-        height: 40px;
-        margin: 10px 15px;
+    #register-form button{
+        margin-top: 20px;
     }
 }

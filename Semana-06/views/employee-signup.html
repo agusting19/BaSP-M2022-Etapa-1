@@ -5,13 +5,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sing up</title>
-        <link rel="icon" href="/assets/logo.png">
-        <link rel="stylesheet" type="text/css" href="/styles/reset.css">
-        <link rel="stylesheet" href="/styles/styles.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/sidebar.css">
-        <link rel="stylesheet" href="/styles/sing-up.css">
-        <link rel="stylesheet" href="/styles/footer.css">
+        <link rel="icon" href="../assets/logo.png">
+        <link rel="stylesheet" type="text/css" href="../styles/reset.css">
+        <link rel="stylesheet" href="../styles/styles.css">
+        <link rel="stylesheet" href="../styles/header.css">
+        <link rel="stylesheet" href="../styles/sidebar.css">
+        <link rel="stylesheet" href="../styles/sing-up.css">
+        <link rel="stylesheet" href="../styles/footer.css">
+        <script src="../javascript/sign-up.js"></script>
         <script src="https://kit.fontawesome.com/8bedfba391.js" crossorigin="anonymous"></script>
     </head>
     <body>
@@ -44,22 +45,58 @@
                 </div>
             </aside>
             <main>
-                <section id="register-form">
+                <section>
                     <h2>Register</h2>
-                    <form action="">
-                        <input placeholder="Name" type="text">
-                        <input placeholder="Last Name" type="text">
-                        <input placeholder="DNI" type="text">
-                        <input placeholder="Date Of Birth" type="text">
-                        <input placeholder="Phone" type="text">
-                        <input placeholder="Address" type="text">
-                        <input placeholder="Location" type="text">
-                        <input placeholder="Postal Code" type="text">
-                        <input placeholder="Email" type="email">
-                        <input placeholder="Repeat email" type="email">
-                        <input placeholder="Passsword" type="password">
-                        <input placeholder="Repeat passsword" type="password">
-                        <button type="submit" class="btn">Countinue</button>
+                    <form id="register-form" action="">
+                        <div>
+                            <input id="firstName" placeholder="Name" type="text">
+                            <span class="error"> </span>
+                        </div>
+                        <div>
+                            <input id="lastName" placeholder="Last Name" type="text">
+                            <span class="error"> </span>
+                        </div>
+                        <div>
+                            <input id="dni" placeholder="DNI" type="text">
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <input id="birth" placeholder="Date Of Birth (dd/mm/yyyy)" type="text">
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <input id="phone" placeholder="Phone" type="text">
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <input id="address" placeholder="Address" type="text">
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <input id="location" placeholder="Location" type="text">
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <input id="postal" placeholder="Postal Code" type="text">
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <input id="email" placeholder="Email" type="email">
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <input id="email2" placeholder="Repeat email" type="email">
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <input id="password" placeholder="Passsword" type="text">
+                            <span class="error"></span>
+                        </div>
+                        <div>
+                            <input id="password2" placeholder="Repeat passsword" type="text">
+                            <span class="error"></span>
+                        </div>
+                        <button type="submit" class="btn">Create</button>
                     </form>
                 </section>
             </main>
