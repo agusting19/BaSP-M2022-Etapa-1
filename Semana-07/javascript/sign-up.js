@@ -381,7 +381,7 @@ window.onload = function () {
                     }
                 })
                 .catch(function(error) {
-                    alert('Error\n please check the inputs');
+                    alert('Error\n please check the inputs\n' + error);
                 });
         } else if(!firstNameValid){
             alert('Error: First Name incorrect \nFirst Name:' + firstName.value);

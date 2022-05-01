@@ -56,3 +56,11 @@ With the knowledge about JavaScript of the last week we need to add two pages to
 Week objetive: Make the Sing Up and Log In pages with his respectives validations and alerts.
 
 github pages: https://agusting19.github.io/BaSP-M2022-Etapa-1/Semana-06/views/index.html
+
+## Week 7
+
+Once the validation were make we had to do a request and work with it saving data or not depending of the response
+
+Week objetive: Make a request and save data in local storage
+
+github pages: https://agusting19.github.io/BaSP-M2022-Etapa-1/Semana-07/views/index.html
