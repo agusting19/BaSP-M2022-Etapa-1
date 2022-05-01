@@ -12,7 +12,7 @@ window.onload = function () {
     var email2 = document.getElementById('email2');
     var password = document.getElementById('password');
     var password2 = document.getElementById('password2');
-    var button = document.getElementsByClassName('btn');
+    var button = document.getElementById('create');
     var span = document.getElementsByClassName('error');
 
     //Validation confirm variables (si se validan true, si no false)
@@ -28,6 +28,8 @@ window.onload = function () {
     var email2Valid = false;
     var passwordValid = false;
     var password2Valid = false;
+
+    fillInputs();
 
     //First name validation
     firstName.addEventListener('blur', firstNameBlur);
@@ -259,6 +261,9 @@ window.onload = function () {
         } else if(!validEmail.test(email2.value)){
             span[9].textContent = 'Please enter a valid email';
             email2Valid = false;
+        } else if(email.value !== email2.value){
+            span[9].textContent = 'Emails does not match';
+            email2Valid = false;
         }
     }
 
@@ -344,6 +349,9 @@ window.onload = function () {
             } else if(contLetters + contNumbers !== password2.value.length){
                 span[11].textContent = 'Password only accept numbers and letters';
                 password2Valid = false;
+            } else if(password.value !== password2.value){
+                span[11].textContent = 'Passwords does not match';
+                password2Valid = false;
             }
         }
     }
@@ -354,11 +362,27 @@ window.onload = function () {
     }
 
     // //Alert sing
-    button[0].addEventListener('click', submitClick);
+    button.addEventListener('click', submitClick);
 
-    function submitClick(){
+    function submitClick(e){
+        e.preventDefault(e);
         if(firstNameValid && lastNameValid && dniValid && birthValid && phoneValid && addressValid && locationValid && postalValid && emailValid && email2Valid && passwordValid && password2Valid){
-            alert('Login Successfull \nFirstName:' + firstName.value + '\nLastName:' + lastName.value + '\nDNI:' + dni.value + '\nBirth:' + birth.value + '\nPhone:' + phone.value + '\nAddress:' + address.value + '\nLocation:' + location.value + '\nPostal Code:' + postal.value + '\nEmail:' + email.value + '\nEmail2:' + email2.value + '\nPassword:' + password.value + '\nPassword2:' + password2.value);
+            const dataSend = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${birth.value}&phone=${phone.value}&address=${address.value}&city=${location.value}&zip=${postal.value}&email=${email.value}&password=${password.value}`;
+            fetch(dataSend)
+                .then(function(response) {
+                    return response.json();
+                })
+                .then(function(responseJson) {
+                    if(responseJson.success){
+                        alert('Created successfully\n' + JSON.stringify(responseJson));
+                        saveDataInLS(responseJson.data);
+                    } else{
+                        throw new Error('salio mal');
+                    }
+                })
+                .catch(function(error) {
+                    alert('Error\n please check the inputs');
+                });
         } else if(!firstNameValid){
             alert('Error: First Name incorrect \nFirst Name:' + firstName.value);
         } else if(!lastNameValid){
@@ -383,6 +407,36 @@ window.onload = function () {
             alert('Error: Password incorrect \nPassword:' + password.value);
         } else if(!password2Valid){
             alert('Error: Password2 incorrect \nPassword2:' + password2.value);
+        }
+    }
+
+    function saveDataInLS(data){
+        localStorage.setItem('firstName', data.name);
+        localStorage.setItem('lastName', data.lastName);
+        localStorage.setItem('dni', data.dni);
+        localStorage.setItem('birth', data.dob);
+        localStorage.setItem('phone', data.phone);
+        localStorage.setItem('address', data.address);
+        localStorage.setItem('location', data.city);
+        localStorage.setItem('postal', data.zip);
+        localStorage.setItem('email', data.email);
+        localStorage.setItem('password', data.password);
+    }
+
+    function fillInputs(){
+        if(localStorage.getItem('firstName') !== null && localStorage.getItem('firstName') !== 'undefined'){
+            firstName.value = localStorage.getItem('firstName');
+            lastName.value = localStorage.getItem('lastName');
+            dni.value = localStorage.getItem('dni');
+            birth.value = localStorage.getItem('birth');
+            phone.value = localStorage.getItem('phone');
+            address.value = localStorage.getItem('address');
+            location.value = localStorage.getItem('location');
+            postal.value = localStorage.getItem('postal');
+            email.value = localStorage.getItem('email');
+            email2.value = localStorage.getItem('email');
+            password.value = localStorage.getItem('password');
+            password2.value = localStorage.getItem('password');
         }
     }
 }
