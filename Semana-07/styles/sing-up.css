@@ -49,6 +49,74 @@ span{
     margin: 5% 0px;
 }
 
+/* Modal */
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-container{
+    width: 80%;
+    margin: 10% auto;
+    padding-left: 20px;
+    background-color: #fefefe;
+    border: 1px solid #888;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 95%;
+    margin: 10px;
+    background-color: #ff5500;
+}
+
+.modal-header > span, .modal-header > i{
+    font-size: 6vw;
+    margin: 10px 10px;
+    color: #ffffff;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-text{
+    background-color: #ffffff;
+    height: 100%;
+    width: 95%;
+    margin: 10px 10px;
+}
+
+.modal-text > span{
+    display: block;
+    font-size: 4vw;
+    margin: 10px;
+}
+
+@media screen and (min-width: 480px){
+    .modal-header span, .modal-header i{
+        font-size: 29px;
+    }
+
+    .modal-text > span{
+        display: block;
+        font-size: 20px;
+    }
+}
+
 @media screen and (min-width: 1024px) {
     #register-form div{
         width: 43%;

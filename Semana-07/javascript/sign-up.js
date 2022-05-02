@@ -6,7 +6,7 @@ window.onload = function () {
     var birth = document.getElementById('birth');
     var phone = document.getElementById('phone');
     var address = document.getElementById('address');
-    var location = document.getElementById('location');
+    var city = document.getElementById('city');
     var postal = document.getElementById('postal');
     var email = document.getElementById('email');
     var email2 = document.getElementById('email2');
@@ -14,6 +14,10 @@ window.onload = function () {
     var password2 = document.getElementById('password2');
     var button = document.getElementById('create');
     var span = document.getElementsByClassName('error');
+    var modal = document.getElementById("sing-up-modal");
+    var modalTitle = document.getElementById('modal-title');
+    var close = document.getElementsByClassName("close")[0];
+    var modalSpan = document.getElementsByClassName("modal-text-span");
 
     //Validation confirm variables (si se validan true, si no false)
     var firstNameValid = false;
@@ -22,7 +26,7 @@ window.onload = function () {
     var birthValid = false;
     var phoneValid = false;
     var addressValid = false;
-    var locationValid = false;
+    var cityValid = false;
     var postalValid = false;
     var emailValid = false;
     var email2Valid = false;
@@ -180,34 +184,34 @@ window.onload = function () {
         addressValid = true;
     }
 
-    //Location validation
-    location.addEventListener('blur', locationBlur);
-    location.addEventListener('focus', locationFocus);
+    //city validation
+    city.addEventListener('blur', cityBlur);
+    city.addEventListener('focus', cityFocus);
 
-    function locationBlur(){
+    function cityBlur(){
         var alphabet = ['a','b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
         var contLetters = 0;
-        var location2 = location.value.toLowerCase();
-        if(location2.length == 0){
-            span[6].textContent = 'Please enter a Location';
+        var city2 = city.value.toLowerCase();
+        if(city2.length == 0){
+            span[6].textContent = 'Please enter a city';
         }else{
-            for (var i = 0; i < location2.length; i++) {
+            for (var i = 0; i < city2.length; i++) {
                 for (var j = 0; j < alphabet.length; j++) {
-                    if (location2[i] == alphabet[j]) {
+                    if (city2[i] == alphabet[j]) {
                         contLetters += 1;
                     }
                 }
             }
             if (contLetters < 3){
-                span[6].textContent = 'Invalid Location';
-                locationValid = false;
+                span[6].textContent = 'Invalid city';
+                cityValid = false;
             }
         }
     }
 
-    function locationFocus(){
+    function cityFocus(){
         span[6].textContent = '';
-        locationValid = true;
+        cityValid = true;
     }
 
     //Postal validation
@@ -366,47 +370,93 @@ window.onload = function () {
 
     function submitClick(e){
         e.preventDefault(e);
-        if(firstNameValid && lastNameValid && dniValid && birthValid && phoneValid && addressValid && locationValid && postalValid && emailValid && email2Valid && passwordValid && password2Valid){
-            const dataSend = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${birth.value}&phone=${phone.value}&address=${address.value}&city=${location.value}&zip=${postal.value}&email=${email.value}&password=${password.value}`;
+        if(firstNameValid && lastNameValid && dniValid && birthValid && phoneValid && addressValid && cityValid && postalValid && emailValid && email2Valid && passwordValid && password2Valid){
+            const dataSend = `https://basp-m2022-api-rest-server.herokuapp.com/signup?name=${firstName.value}&lastName=${lastName.value}&dni=${dni.value}&dob=${birth.value}&phone=${phone.value}&address=${address.value}&city=${city.value}&zip=${postal.value}&email=${email.value}&password=${password.value}`;
             fetch(dataSend)
                 .then(function(response) {
                     return response.json();
                 })
                 .then(function(responseJson) {
                     if(responseJson.success){
-                        alert('Created successfully\n' + JSON.stringify(responseJson));
+                        modal.style.display = "block";
+                        modalTitle.textContent = 'Created successfully';
+                        modalSpan[0].textContent = '\nFirst Name: ' + firstName.value;
+                        modalSpan[1].textContent = '\nLast Name: ' + lastName.value;
+                        modalSpan[2].textContent = '\nDNI: ' + dni.value;
+                        modalSpan[3].textContent = '\nDate of Birth: ' + birth.value;
+                        modalSpan[4].textContent = '\nPhone: ' + phone.value;
+                        modalSpan[5].textContent = '\nAddress: ' + address.value;
+                        modalSpan[6].textContent = '\nCity: ' + city.value;
+                        modalSpan[7].textContent = '\nPostal Code: ' + postal.value;
+                        modalSpan[8].textContent = '\nEmail: ' + email.value;
+                        modalSpan[9].textContent = '\nPassword: ' + password.value;
                         saveDataInLS(responseJson.data);
                     } else{
                         throw new Error('salio mal');
                     }
                 })
                 .catch(function(error) {
-                    alert('Error\n please check the inputs\n' + error);
+                    modal.style.display = "block";
+                    modalTitle.textContent = 'Error: ' + error;
+                    modalSpan[0].textContent = '\nFirst Name: ' + firstName.value;
+                    modalSpan[1].textContent = '\nLast Name: ' + lastName.value;
+                    modalSpan[2].textContent = '\nDNI: ' + dni.value;
+                    modalSpan[3].textContent = '\nDate of Birth: ' + birth.value;
+                    modalSpan[4].textContent = '\nPhone: ' + phone.value;
+                    modalSpan[5].textContent = '\nAddress: ' + address.value;
+                    modalSpan[6].textContent = '\nCity: ' + city.value;
+                    modalSpan[7].textContent = '\nPostal Code: ' + postal.value;
+                    modalSpan[8].textContent = '\nEmail: ' + email.value;
+                    modalSpan[9].textContent = '\nPassword: ' + password.value;
                 });
         } else if(!firstNameValid){
-            alert('Error: First Name incorrect \nFirst Name:' + firstName.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error: First Name incorrect';
+            modalSpan[0].textContent = '\nFirst Name: ' + firstName.value;
         } else if(!lastNameValid){
-            alert('Error: Last Name incorrect \nLast Name:' + lastName.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error: Last Name incorrect';
+            modalSpan[0].textContent = '\nLast Name: ' + lastName.value;
         } else if(!dniValid){
-            alert('Error: DNI incorrect \nDNI:' + dni.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error: DNI incorrect';
+            modalSpan[0].textContent = '\nDNI: ' + dni.value;
         } else if(!birthValid){
-            alert('Error: Date of Birth incorrect \nDate of birth:' + birth.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error: Date of Birth incorrect';
+            modalSpan[0].textContent = '\nDate of Birth: ' + birth.value;
         } else if(!phoneValid){
-            alert('Error: Phone incorrect \nPhone:' + phone.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error: Phone incorrect';
+            modalSpan[0].textContent = '\nPhone: ' + phone.value;
         } else if(!addressValid){
-            alert('Error: Address incorrect \nAddress:' + address.value);
-        } else if(!locationValid){
-            alert('Error: Location incorrect \nLocation:' + location.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error: Address incorrect';
+            modalSpan[0].textContent = '\nAddress: ' + address.value;
+        } else if(!cityValid){
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error: City incorrect';
+            modalSpan[0].textContent = '\nCity: ' + city.value;
         } else if(!postalValid){
-            alert('Error: Postal Code incorrect \nPostal Code:' + postal.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error: Postal Code incorrect';
+            modalSpan[0].textContent = '\nPostal Code: ' + postal.value;
         } else if(!emailValid){
-            alert('Error: Email incorrect \nEmail:' + email.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error: Email incorrect';
+            modalSpan[0].textContent = '\nEmail: ' + email.value;
         } else if(!email2Valid){
-            alert('Error: Email 2 incorrect \nEmail2:' + email2.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error: Email 2 incorrect';
+            modalSpan[0].textContent = '\nEmail 2: ' + email2.value;
         } else if(!passwordValid){
-            alert('Error: Password incorrect \nPassword:' + password.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error: Password incorrect';
+            modalSpan[0].textContent = '\nPassword: ' + password.value;
         } else if(!password2Valid){
-            alert('Error: Password2 incorrect \nPassword2:' + password2.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error: Password 2 incorrect';
+            modalSpan[0].textContent = '\nPassword 2: ' + password2.value;
         }
     }
 
@@ -417,7 +467,7 @@ window.onload = function () {
         localStorage.setItem('birth', data.dob);
         localStorage.setItem('phone', data.phone);
         localStorage.setItem('address', data.address);
-        localStorage.setItem('location', data.city);
+        localStorage.setItem('City', data.city);
         localStorage.setItem('postal', data.zip);
         localStorage.setItem('email', data.email);
         localStorage.setItem('password', data.password);
@@ -431,12 +481,22 @@ window.onload = function () {
             birth.value = localStorage.getItem('birth');
             phone.value = localStorage.getItem('phone');
             address.value = localStorage.getItem('address');
-            location.value = localStorage.getItem('location');
+            city.value = localStorage.getItem('city');
             postal.value = localStorage.getItem('postal');
             email.value = localStorage.getItem('email');
             email2.value = localStorage.getItem('email');
             password.value = localStorage.getItem('password');
             password2.value = localStorage.getItem('password');
         }
+    }
+
+    window.onclick = function(event){
+        if (event.target == modal){
+            modal.style.display = "none";
+        }
+    }
+    
+    close.onclick = function(){
+        modal.style.display = "none";
     }
 }
