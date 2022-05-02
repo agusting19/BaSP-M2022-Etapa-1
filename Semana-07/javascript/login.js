@@ -4,6 +4,10 @@ window.onload = function () {
     var span = document.getElementsByClassName('error');
     var password = document.getElementById('password');
     var button = document.getElementById('login');
+    var modal = document.getElementById("sing-up-modal");
+    var modalTitle = document.getElementById('modal-title');
+    var close = document.getElementsByClassName("close")[0];
+    var modalSpan = document.getElementsByClassName("modal-text-span");
     
     var emailValidated = false; //Se usa para la alerta final
     var passwordValidated = false; //Se usa para la alerta final
@@ -83,25 +87,54 @@ window.onload = function () {
             const dataSend = `https://basp-m2022-api-rest-server.herokuapp.com/login?email=${email.value}&password=${password.value}`;
             fetch(dataSend)
                 .then(function(response) {
+                    console.log(response);
                     return response.json();
                 })
                 .then(function(responseJson) {
-                    console.log(responseJson);
                     if(responseJson.success){
-                        alert('Login successfull\n', responseJson.msg);
+                        modal.style.display = "block";
+                        modalTitle.textContent = 'Login successfull';
+                        modalSpan[0].textContent = '\nEmail: ' + email.value;
+                        modalSpan[1].textContent = '\nPassword: ' + password.value;
                     } else{
                         throw new Error('salio mal');
                     }
                 })
                 .catch(function(error) {
-                    alert('Error\n email or password incorrect');
+                    modal.style.display = "block";
+                    modalTitle.textContent = 'Error';
+                    modalSpan[0].textContent = '\nEmail: ' + email.value;
+                    modalSpan[1].textContent = '\nPassword: ' + password.value;
+                    modalSpan[2].textContent = '\nIncorrect email or password';
                 });
         } else if(!emailValidated && !passwordValidated){
-            alert('Error: Email and password incorrect \nEmail:' + email.value + '\nPassword:' + password.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error';
+            modalSpan[0].textContent = '\nEmail: ' + email.value;
+            modalSpan[1].textContent = '\nPassword: ' + password.value;
+            modalSpan[2].textContent = '\nEmail and password incorrect';
         } else if(!emailValidated){
-            alert('Error: Email incorrect \nEmail:' + email.value + '\nPassword:' + password.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error';
+            modalSpan[0].textContent = '\nEmail: ' + email.value;
+            modalSpan[1].textContent = '\nPassword: ' + password.value;
+            modalSpan[2].textContent = '\nInvalid Email';
         } else{
-            alert('Error: Password incorrect \nEmail:' + email.value + '\nPassword:' + password.value);
+            modal.style.display = "block";
+            modalTitle.textContent = 'Error';
+            modalSpan[0].textContent = '\nEmail: ' + email.value;
+            modalSpan[1].textContent = '\nPassword: ' + password.value;
+            modalSpan[2].textContent = '\nInvalid Password';
         }
+    }
+
+    window.onclick = function(event){
+        if (event.target == modal){
+            modal.style.display = "none";
+        }
+    }
+    
+    close.onclick = function(){
+        modal.style.display = "none";
     }
 }
