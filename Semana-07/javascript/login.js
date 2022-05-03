@@ -96,6 +96,7 @@ window.onload = function () {
                         modalTitle.textContent = 'Login successfull';
                         modalSpan[0].textContent = '\nEmail: ' + email.value;
                         modalSpan[1].textContent = '\nPassword: ' + password.value;
+                        modalSpan[2].textContent = '';
                     } else{
                         throw new Error('salio mal');
                     }

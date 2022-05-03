@@ -110,14 +110,14 @@ window.onload = function () {
             span[3].textContent = 'Please enter a valid Date';
             birthValid = false;
         } else{
-            var dd = birth.value.substring(0,2);
-            var mm = birth.value.substring(3,5);
+            var mm = birth.value.substring(0,2);
+            var dd = birth.value.substring(3,5);
             var yyyy = birth.value.substring(6,10);
-            if(isNaN(dd) || dd > 31){
-                span[3].textContent = 'Please enter a valid day (dd)';
-                birthValid = false;
-            } else if(isNaN(mm) || mm > 12){
+            if(isNaN(mm) || mm > 12){
                 span[3].textContent = 'Please enter a valid month (mm)';
+                birthValid = false;
+            } else if(isNaN(dd) || dd > 31){
+                span[3].textContent = 'Please enter a valid day (dd)';
                 birthValid = false;
             } else if(isNaN(yyyy)){
                 span[3].textContent = 'Please enter a valid year (yyyy)';
